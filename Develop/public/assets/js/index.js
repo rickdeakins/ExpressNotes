@@ -83,6 +83,15 @@ const handleNoteSave = () => {
   });
 };
 
+const notesDisplay = () => { 
+  fetch('./api/notes').then(response => response.json())
+    .then (notes => {const notesList = document.getElementById('notes-list')});
+    notesList.innerhtml = ''; // Clear existing notes
+    notes.array.forEach(element => {const noteText = document.createElement('li'); 
+    noteText.textContent = note.title;
+    notesList.appendChild(noteItem);})
+    .catch (error => {console.error('Error fetching notes:', error)});}
+
 // Delete the clicked note
 const handleNoteDelete = (e) => {
   // Prevents the click listener for the list from being called when the button inside of it is clicked
