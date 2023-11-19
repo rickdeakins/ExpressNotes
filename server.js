@@ -16,12 +16,12 @@ const apiRoutes = require("./Develop/routes/apiRoutes");
 const htmlRoutes = require("./Develop/routes/htmlRoutes");
 
 //Middleware - how Express handles data parsing
-app.use(express.static("public")); //Serving static files from public directory
 app.use(express.json()); //Parsing JSON data
 app.use(express.urlencoded({ extended: true })); //Handle form submissions and and access form data in Express routes
 
 app.use("/api", apiRoutes);
 app.use("/", htmlRoutes);
+app.use(express.static("public")); //Serving static files from public directory
 
 //Server listener
 app.listen(PORT, () =>
