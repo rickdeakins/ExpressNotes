@@ -8,9 +8,6 @@ const { v4: uuidv4 } = require("uuid");
 // Initialize Express instance
 const app = express();
 
-// Promise version of fs.readFile
-const readFromFile = util.promisify(fs.readFile);
-
 // Specify the port the Express server will run
 const PORT = process.env.PORT || 3001;
 
