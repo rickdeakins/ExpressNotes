@@ -23,5 +23,10 @@
         "title": "Pull new data",
         "text": "Perform a git pull ",
         "id": "fd4f0b20-85fd-11ee-8728-afc0aba4b229"
+    },
+    {
+        "title": "Debug Heroku Errors",
+        "text": "Error H10 - needs resolution",
+        "id": "9aecbad0-8608-11ee-8728-afc0aba4b229"
     }
 ]
