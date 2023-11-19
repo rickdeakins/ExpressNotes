@@ -16,8 +16,8 @@ const readFromFile = util.promisify(fs.readFile);
 const PORT = 3000;
 
 //require files 
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./Develop/routes/apiRoutes');
+const htmlRoutes = require('./Develop/routes/htmlRoutes');
 
 
 
