@@ -1,9 +1,5 @@
 //Required dependencies
 const express = require("express");
-const path = require("path");
-const fs = require("fs");
-const util = require("util");
-const { v4: uuidv4 } = require("uuid");
 
 // Initialize Express instance
 const app = express();

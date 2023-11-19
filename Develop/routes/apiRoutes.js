@@ -1,4 +1,3 @@
-const express = require("express");
 const path = require("path");
 const uuidv1 = require("uuid/v1");
 const apiRouter = require("express").Router();
