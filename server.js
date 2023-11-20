@@ -3,7 +3,7 @@ const express = require("express");
 
 //require files
 const apiRoutes = require("./Develop/routes/apiRoutes");
-const htmlRoutes = require("./Develop/routes/htmlRoutes");
+const htmlRoutes = require("./Develop/routes/htmlroutes");
 
 // Initialize Express instance
 const app = express();
