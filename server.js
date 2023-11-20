@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 //Middleware - how Express handles data parsing
-app.use(express.json()); //Parsing JSON data
+app.use(express.json()); // Parsing JSON data
 app.use(express.urlencoded({ extended: true })); //Handle form submissions and and access form data in Express routes
 
 app.use("/api", apiRoutes);
