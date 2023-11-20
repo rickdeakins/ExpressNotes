@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const uuidv1 = require("uuid/v1");
-const apiRouter = require("express").Router();
+const apiRouter = express.Router();
 const { readFromFile, writeToFile, readAndAppend } = require("../utils/helper");
 
 //GET route for /api/notes to read the `db.json` file and return all saved notes as JSON.
