@@ -22,13 +22,13 @@ apiRouter.get("/notes", async (req, res) => {
 });
 
 //POST route for /api/notes to receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the user.
-apiRouter.post("/notes", (req, res) => {
-  console.info(`${req.method} request received to add a note.`);
-  let newNote = req.body;
-  newNote.id = uuidv1();
-  readAndAppend(newNote, path.join(__dirname, "../db/db.json"));
-  res.json(newNote);
-}); // Log that a POST request was received
+// apiRouter.post("/notes", (req, res) => {
+//   console.info(`${req.method} request received to add a note.`);
+//   let newNote = req.body;
+//   newNote.id = uuidv1();
+//   readAndAppend(newNote, path.join(__dirname, "../db/db.json"));
+//   res.json(newNote);
+// }); // Log that a POST request was received
 
 // apiRouter.delete("/notes/:id", async (req, res) => {
 //   try {
