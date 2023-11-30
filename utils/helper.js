@@ -20,12 +20,14 @@ const writeToFile = (destination, content) =>
  *  @returns {void} Nothing
  */
 const readAndAppend = (content, file) => {
+  console.log(content); console.log(file);
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
     } else {
       const parsedData = JSON.parse(data);
-      parsedData.push(content);
+      console.log(parsedData);
+      parsedData.concat(content);
       writeToFile(file, parsedData);
     }
   });
