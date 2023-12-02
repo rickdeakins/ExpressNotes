@@ -1,1 +1,52 @@
-[{"title":"Test Title","text":"Test text"},{"title":"Check work","text":"Testing process","id":"bba6dca0-8e65-11ee-b5e4-9f38afe6f24f"}]
+[
+    {
+        "title": "Start new project",
+        "text": "New project requires multiple steps\n",
+        "id": "a9203780-84d7-11ee-a00e-59bf7b38efef"
+    },
+    {
+        "title": "Commit Updates",
+        "text": "Send commit in GitHub to save project changes",
+        "id": "c9c8bc60-85fd-11ee-8728-afc0aba4b229"
+    },
+    {
+        "title": "Review errors in code",
+        "text": "Server error 500 present in Chrome devtools",
+        "id": "dfca6ef0-85fd-11ee-8728-afc0aba4b229"
+    },
+    {
+        "title": "Client Follow Up",
+        "text": "Client contact to clarify comments",
+        "id": "ecb50350-85fd-11ee-8728-afc0aba4b229"
+    },
+    {
+        "title": "Pull new data",
+        "text": "Perform a git pull ",
+        "id": "fd4f0b20-85fd-11ee-8728-afc0aba4b229"
+    },
+    {
+        "title": "Debug Heroku Errors",
+        "text": "Error H10 - needs resolution",
+        "id": "9aecbad0-8608-11ee-8728-afc0aba4b229"
+    },
+    {
+        "title": "UX Test",
+        "text": "Refer to tester",
+        "id": "7ad8dce0-8ffb-11ee-a236-17be779f4ccd"
+    },
+    {
+        "title": "Team Scrum",
+        "text": "Team scrum in AM",
+        "id": "16608960-8ffc-11ee-a236-17be779f4ccd"
+    },
+    {
+        "title": "Server review",
+        "text": "Review for bugs",
+        "id": "fa7711d0-9107-11ee-ae57-eb444b18a0a8"
+    },
+    {
+        "title": "Deploy Errors",
+        "text": "Debug any errors found at time of deployment",
+        "id": "ebca3e90-9108-11ee-abcb-23b643483bcf"
+    }
+]

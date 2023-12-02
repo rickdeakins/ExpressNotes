@@ -8,7 +8,7 @@ const apiRoutes = require("./routes/apiRoutes");
 const app = express();
 
 // Specify the port the Express     server will run
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 //Middleware - how Express handles data parsing
 app.use(express.json()); // Parsing JSON data

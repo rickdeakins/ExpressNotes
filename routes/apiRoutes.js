@@ -3,6 +3,7 @@ const path = require("path");
 const uuidv1 = require("uuid/v1");
 const apiRouter = require("express").Router();
 const { readFromFile, writeToFile, readAndAppend } = require("../utils/helper");
+const fs = require('fs');
 
 //GET route for /api/notes to read the `db.json` file and return all saved notes as JSON.
 apiRouter.get("/notes", async (req, res) => {
@@ -27,42 +28,33 @@ apiRouter.get("/notes", async (req, res) => {
 //   let newNote = req.body;
 //   newNote.id = uuidv1();
 //   readAndAppend(newNote, path.join(__dirname, "../db/db.json"));
-//   res.json(newNote);
 // }); // Log that a POST request was received
 
-// apiRouter.delete("/notes/:id", async (req, res) => {
-//   try {
-//     const noteId = req.params.id;
 
-//     // Read the existing notes from the db.json file
-//     const data = await readFromFile(
-//       path.join(__dirname, "../db/db.json"),
-//       "utf8"
-//     );
-//     const parsedNotes = JSON.parse(data);
+apiRouter.post("/notes", async (req, res) => {
+  try {
+    console.info(`${req.method} request received to add a note.`);
+    let newNote = req.body;
+    newNote.id = uuidv1();
+    await readAndAppend(newNote, path.join(__dirname, "../db/db.json"));
 
-//     // Find the index of the note with the matching ID
-//     const noteIndex = parsedNotes.findIndex((note) => note.id === noteId);
+    // Read the updated notes from the file
+    const updatedData = await readFromFile(
+      path.join(__dirname, "../db/db.json"),
+      "utf8"
+    );
 
-//     if (noteIndex === -1) {
-//       return res.status(404).json({ error: "Note not found" });
-//     }
+    // Parse the updated notes and send it back in the response
+    const updatedNotes = JSON.parse(updatedData);
+    res.json(updatedNotes);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
-//     // Remove the note from the array
-//     parsedNotes.splice(noteIndex, 1);
 
-//     // Write the updated array of notes back to the db.json file
-//     await writeToFile(
-//       path.join(__dirname, "../db/db.json"),
-//       JSON.stringify(parsedNotes)
-//     );
 
-//     // Note successfully deleted
-//     res.json({ message: "Note deleted successfully" });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: "Internal Server Error" });
-//   }
-// });
+
 
 module.exports = apiRouter;
